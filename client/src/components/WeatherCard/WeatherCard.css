@@ -1,0 +1,238 @@
+.weather-panel {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.current-panel {
+  display: flex;
+  min-height: 260px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 32px;
+  border: 1px solid #dce3ee;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(19, 31, 52, 0.08);
+}
+
+.location-label,
+.updated-label {
+  margin: 0;
+  color: #637083;
+  font-size: 0.9rem;
+}
+
+.current-panel h2 {
+  max-width: 620px;
+  margin: 10px 0 12px;
+  color: #172033;
+  font-size: clamp(2rem, 5vw, 4.25rem);
+  line-height: 1;
+}
+
+.current-visual {
+  display: grid;
+  min-width: 220px;
+  justify-items: end;
+  color: #172033;
+}
+
+.current-visual span {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.current-visual strong {
+  margin-top: 12px;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0 28px;
+}
+
+.metric-grid div {
+  min-height: 108px;
+  padding: 18px;
+  border: 1px solid #dde5ef;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.metric-grid span,
+.hour-card span,
+.hour-card small,
+.day-row span {
+  color: #657287;
+}
+
+.metric-grid strong {
+  display: block;
+  margin-top: 12px;
+  color: #172033;
+  font-size: 1.3rem;
+}
+
+.forecast-section {
+  margin-top: 26px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-heading h3 {
+  margin: 0;
+  color: #172033;
+  font-size: 1.1rem;
+}
+
+.hourly-strip {
+  display: grid;
+  grid-auto-columns: 116px;
+  grid-auto-flow: column;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.hour-card {
+  display: grid;
+  min-height: 148px;
+  align-content: space-between;
+  padding: 14px;
+  border: 1px solid #dde5ef;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.hour-card strong {
+  color: #172033;
+  font-size: 2.1rem;
+}
+
+.hour-card b {
+  color: #172033;
+  font-size: 1.1rem;
+}
+
+.daily-list {
+  display: grid;
+  gap: 10px;
+}
+
+.day-row {
+  display: grid;
+  grid-template-columns: 1fr 48px minmax(92px, auto);
+  min-height: 74px;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 18px;
+  border: 1px solid #dde5ef;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.day-row div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.day-row strong {
+  color: #172033;
+}
+
+.day-icon {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.day-temps {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.status-panel {
+  display: grid;
+  min-height: 320px;
+  place-items: center;
+  padding: 32px;
+  border: 1px solid #dce3ee;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172033;
+  text-align: center;
+}
+
+.status-panel p {
+  margin: 0;
+}
+
+.status-panel button {
+  min-height: 42px;
+  margin-top: 14px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #116466;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid #dce3ee;
+  border-top-color: #116466;
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .current-panel {
+    display: grid;
+    padding: 22px;
+  }
+
+  .current-visual {
+    min-width: 0;
+    justify-items: start;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .day-row {
+    grid-template-columns: 1fr 38px;
+  }
+
+  .day-temps {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+}

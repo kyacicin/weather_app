@@ -1,0 +1,21 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "Express API for the weather web and iOS apps.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "check": "node --check app.js && node --check utils/openMeteo.js"
+  },
+  "keywords": [
+    "weather",
+    "open-meteo",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
