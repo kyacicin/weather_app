@@ -7,10 +7,12 @@ This folder contains the SwiftUI source for the iOS version of WeatherNow. The a
 
 ## Create the Xcode App
 
-1. Open Xcode and create a new iOS App project named `WeatherNow`.
-2. Use SwiftUI for the interface and Swift for the language.
-3. Add the files from `ios/WeatherNow/` to the app target.
-4. Merge the keys from `ios/WeatherNow/Info.plist` into the generated app Info settings.
-5. Start the backend from `server/` before running the iOS app.
+Open the ready-made project:
 
-The current machine has Command Line Tools selected instead of full Xcode, so iOS Simulator builds cannot be validated from this terminal yet.
+```bash
+open ios/WeatherNow.xcodeproj
+```
+
+Then select an iPhone Simulator and press Run. Start the backend from `server/` before running the iOS app.
+
+The project has been validated with Xcode 26.5 using an iPhone Simulator build.
